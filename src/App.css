@@ -16,3 +16,24 @@
 .dropdown button:hover{
   color: red  !important;
 }
+.dropdown-item{
+  background-color: #333333;
+}
+.dropdown button{
+white-space: nowrap;
+}
+input:focus{
+  outline: none;
+
+}
+input{
+  height: 100%;
+  width:  80%;
+}
+.cuson{
+  cursor: pointer;
+}
+.fb{
+  width: 40px;
+  height: 40px;
+}

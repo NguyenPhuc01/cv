@@ -1,120 +1,84 @@
 import { Container, Row, Col, Nav, NavDropdown, Dropdown, Navbar, Offcanvas, Form, FormControl, Button } from 'react-bootstrap';
-
-
+import { BsSearch, BsPersonFill } from "react-icons/bs";
 function Header() {
     return (
-        <Container fluid className='bgAll'>
+        <Container fluid className='bgAll border-bottom fixed-top'>
             <Container>
                 <Row>
                     <Col XL={10}>
                         <div>
                             <Navbar bg="" expand="lg">
                                 <Container fluid>
-                                    <Navbar.Brand href="#"><img className='logo' src="phim1080.png" /></Navbar.Brand>
-
-                                    {/* <Navbar.Brand href="#" className='me-0'>
-
-                                        <div class="dropdown ">
-                                            <button class="btn text-light " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Thể Loại
-                                            </button>
-                                            <ul class="dropdown-menu bg-dark hoverDropdown " aria-labelledby="">
-                                                <li><a class="dropdown-item text-light" href="#">Action</a></li>
-                                                <li><a class="dropdown-item text-light" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
-                                            </ul>
-                                        </div>
-                                    </Navbar.Brand>
-
-                                    <Navbar.Brand href="#" className='me-0'>
-                                        <div class="dropdown">
-                                            <button class="btn text-light " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                               Quốc Gia
-                                            </button>
-                                            <ul class="dropdown-menu bg-dark hoverDropdown " aria-labelledby="">
-                                                <li><a class="dropdown-item text-light" href="#">Action</a></li>
-                                                <li><a class="dropdown-item text-light" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
-                                            </ul>
-                                        </div></Navbar.Brand>
-
-
-                                    <Navbar.Brand href="#" className='me-0'>
-                                        <div class="dropdown">
-                                            <button class="btn text-light " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                          Phim Lẻ
-                                            </button>
-                                            <ul class="dropdown-menu bg-dark hoverDropdown " aria-labelledby="">
-                                                <li><a class="dropdown-item text-light" href="#">Action</a></li>
-                                                <li><a class="dropdown-item text-light" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
-                                            </ul>
-                                        </div></Navbar.Brand>
-
-
-                                    <Navbar.Brand href="#" className='me-0'>
-                                        <div class="dropdown">
-                                            <button class="btn text-light " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Phim Bộ
-                                            </button>
-                                            <ul class="dropdown-menu bg-dark hoverDropdown " aria-labelledby="">
-                                                <li><a class="dropdown-item text-light" href="#">Action</a></li>
-                                                <li><a class="dropdown-item text-light" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
-                                            </ul>
-                                        </div></Navbar.Brand>
-
-
-
-                                    <Navbar.Brand href="#" className='me-0'>
-                                        <div class="dropdown">
-
-                                            <button class="btn text-light " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                           Chiếu Rạp
-                                            </button>
-                                           
-                                           
-                                        </div></Navbar.Brand>
-
-
-
-
-                                    <Navbar.Brand href="#" className='me-0'>
-                                        <div class="dropdown">
-                                            <button class="btn text-light " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                   Sắp Chiếu
-                                            </button>
-                                            
-                                        </div></Navbar.Brand>
-
-
-                                    <Navbar.Brand href="#">
-                                        <div class="">
-                                           <input type="search"/>
-                                            
-                                        </div></Navbar.Brand> */}
-
-
-                                    <Navbar id="responsive-navbar-nav" className='d-none d-xl-block'>
+                                    <Navbar.Brand href="#" className='me-0'><img className='logo' src="phim1080.png" /></Navbar.Brand>
+                                    <Navbar id="responsive-navbar-nav" className='d-none d-lg-block'>
                                         <Nav className="me-auto">
-                                            <Nav.Link href="#features">Features</Nav.Link>
-                                            <Nav.Link href="#pricing">Pricing</Nav.Link>
-                                            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                                <NavDropdown.Divider />
-                                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                                            </NavDropdown>
+                                            <div className="dropdown">
+                                                <button className="btn text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Thể Loại
+                                                </button>
+                                                <ul className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a className="dropdown-item text-light" href="#">Action</a></li>
+                                                    <li><a className="dropdown-item text-light" href="#">Another action</a></li>
+                                                    <li><a className="dropdown-item text-light" href="#">Something else here</a></li>
+                                                </ul>
+                                            </div>
+                                            <div className="dropdown">
+                                                <button className="btn text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Quốc Gia
+                                                </button>
+                                                <ul className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a className="dropdown-item text-light" href="#">Action</a></li>
+                                                    <li><a className="dropdown-item text-light" href="#">Another action</a></li>
+                                                    <li><a className="dropdown-item text-light" href="#">Something else here</a></li>
+                                                </ul>
+                                            </div>
+                                            <div className="dropdown">
+                                                <button className="btn text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Phim Lẻ
+                                                </button>
+                                                <ul className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a className="dropdown-item text-light" href="#">Action</a></li>
+                                                    <li><a className="dropdown-item text-light" href="#">Another action</a></li>
+                                                    <li><a className="dropdown-item text-light" href="#">Something else here</a></li>
+                                                </ul>
+                                            </div>
+                                            <div className="dropdown">
+                                                <button className="btn text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Phim Bộ
+                                                </button>
+                                                <ul className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a className="dropdown-item text-light" href="#">Action</a></li>
+                                                    <li><a className="dropdown-item text-light" href="#">Another action</a></li>
+                                                    <li><a className="dropdown-item text-light" href="#">Something else here</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div className="dropdown">
+                                                <button className="btn text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Chiếu Rạp
+                                                </button>
+                                            </div>
+                                            <div className="dropdown">
+                                                <button className="btn text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Sắp Chiếu
+                                                </button>
+                                            </div>
+
+                                            <div className="ms-2 rounded-pill border border-secondary bg-dark d-flex align-items-center   d-none d-lg-block">
+                                                <input type="search" placeholder='Tìm Kiếm' className=' bg-dark text-light border-0 ms-3  rounded-pill' />
+                                                <BsSearch className='text-light me-2 cuson fw-blod mb-1' />
+                                            </div>
                                         </Nav>
-                                     
+
                                     </Navbar>
+
                                     <Navbar.Toggle aria-controls="offcanvasNavbar " />
 
                                     <Navbar.Offcanvas
                                         id="offcanvasNavbar"
                                         aria-labelledby="offcanvasNavbarLabel"
                                         placement="end"
+                                        className="px-0"
                                     >
                                         <Offcanvas.Header closeButton>
                                             <Offcanvas.Title id="offcanvasNavbarLabel">Offcanvas</Offcanvas.Title>
@@ -148,10 +112,15 @@ function Header() {
                             </Navbar>
                         </div>
                     </Col>
-                    <Col xl={2}>
-                        <h1 className='text-light'>
-                            tesst
-                        </h1>
+
+                    <Col xl={2} className="d-flex align-items-center justify-content-around">
+                        <div className="d-flex align-items-center justify-content-evenly d-none d-xl-block">
+
+
+                            <div className='me-4'><img src='facebook.png' className='fb' /></div>
+                            <div><BsPersonFill className='text-light fs-1  rounded-circle border border-light p-2' /></div>
+                        </div>
+
                     </Col>
                 </Row>
 

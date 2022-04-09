@@ -1,0 +1,24 @@
+/* .userName{
+    display:flex;
+    flex-direction:column;
+}
+.passWord{
+    display:flex;
+    flex-direction:column;
+} */
+.Login {
+    height: 100vh;
+}
+
+.iconUserName input,
+.iconPassWord input {
+    border: none;
+    font-size: 17px;
+    width: 90%;
+}
+
+.iconUserName,
+.iconPassWord {
+    border: 1px solid black;
+    border-radius: 8px;
+}
