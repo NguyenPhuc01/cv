@@ -1,115 +1,84 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import { BsFillCameraReelsFill } from "react-icons/bs";
-import React, { Component } from "react";
-import Slider from "react-slick";
+import { BsFillCameraReelsFill, } from "react-icons/bs";
+import React, { Component, useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import Header from '../Header';
+import Watch from '../Watch';
+import './Body.css'
+
 function Body() {
-
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
+    const [films, setFilms] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:3000/film')
+            .then(res => res.json())
+            .then(films => {
+                setFilms(films)
+            })
+    }, [])
 
 
     return (
 
-        <Container fluid className='bgAll mt-5 pt-5'>
+        <Container fluid className='bg_black mt-5 pt-5 '>
             <Header />
             <Container>
                 <Row>
-                    <Col xl>
-                        <div className='text-light ms-5 ps-5  d-flex mt-5'>
-                            <BsFillCameraReelsFill className='text-danger fs-3 me-3' />
-                            <h5> PHIM ĐỀ CỬ</h5>
-                        </div>
-
-                        <div className='carosel text-light mt-5'>
-                            <div>
-
-                                <Slider {...settings}>
-                                    <div >
-                                        <img src='spiderman.jpg' className='mw-75' />
-
-                                    </div>
-                                    <div>
-                                        <img src='daula.jpg' className='mw-50' />
-                                    </div>
-                                    <div>
-                                        <img src='nguoihoagiai.jpg' className='mw-75' />
-                                    </div>
-                                    <div>
-                                        <img src='spiderman.jpg' className='mw-75' />
-                                    </div>
-                                    <div>
-                                        <img src='daula.jpg' className='mw-75' />
-
-                                    </div>
-                                    <div>
-                                        <img src='nguoihoagiai.jpg' className='mw-75' />
-
-                                    </div>
-                                    <div>
-                                        <img src='spiderman.jpg' />
-                                    </div>
-                                    <div>
-                                        <img src='daula.jpg' className='mw-75' />
-
-                                    </div>
-                                    <div>
-                                        <img src='nguoihoagiai.jpg' className='mw-75' />
-
-                                    </div>
-                                </Slider>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-
-                {/* <Row>
                     <Col>
-                        <div>
-                            <video width="750" height="500" controls >
-                                <source src="video1.mp4" type="video/mp4" />
-                            </video>
+                        <div className='titlefilm'>
+                            <h4 className='text-uppercase text-light'>
+                                <BsFillCameraReelsFill className='' /> Phim bộ mới
+                            </h4>
+                        </div>
+
+
+                        {/* <ul>
+                            {films.map((film) => {
+                                return (<li key={film.id}>{film.title}</li>
+                                )
+
+
+
+
+                            })}
+
+                        </ul> */}
+
+                        <div className='content mt-5 d-flex justify-content-center'>
+
+
+
+
+
+
+
+
+                            {films.map((film) => {
+
+
+                                return (
+                                    <Link to='Watch' className="film mb-5 me-3 text-decoration" >
+
+                                        <img src={film.image} className="" alt="..." />
+                                        <div className="film_tilte ">
+                                            <h6 className="card-title ms-2  text-decoration-none">{film.title}</h6>
+                                            <p className="card-text ms-2  text-decoration-none ">{film.description}</p>
+                                        </div>
+                                    </Link>
+
+                                )
+
+
+
+                            })}
+                        
+
                         </div>
                     </Col>
-                </Row> */}
 
-            </Container>
+                </Row>
+            </Container >
 
-        </Container>
+        </Container >
 
     )
 

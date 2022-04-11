@@ -8,6 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import Body from './Components/Body';
+import Watch from './Components/Watch';
 
 
 ReactDOM.render(
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/Body' element={<Body />} />
+        <Route path='/Body/Watch' element={<Watch />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

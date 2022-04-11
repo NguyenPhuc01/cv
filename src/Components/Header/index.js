@@ -1,5 +1,5 @@
 import { Container, Row, Col, Nav, NavDropdown, Dropdown, Navbar, Offcanvas, Form, FormControl, Button } from 'react-bootstrap';
-import { BsSearch, BsPersonFill } from "react-icons/bs";
+import { BsSearch, BsPersonFill, BsFacebook } from "react-icons/bs";
 function Header() {
     return (
         <Container fluid className='bgAll border-bottom fixed-top'>
@@ -10,7 +10,7 @@ function Header() {
                             <Navbar bg="" expand="lg">
                                 <Container fluid>
                                     <Navbar.Brand href="#" className='me-0'><img className='logo' src="phim1080.png" /></Navbar.Brand>
-                                    <Navbar id="responsive-navbar-nav" className='d-none d-lg-block'>
+                                    <Navbar id="responsive-navbar-nav" className='d-none d-lg-block '>
                                         <Nav className="me-auto">
                                             <div className="dropdown">
                                                 <button className="btn text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,15 +64,15 @@ function Header() {
                                                 </button>
                                             </div>
 
-                                            <div className="ms-2 rounded-pill border border-secondary bg-dark d-flex align-items-center   d-none d-lg-block">
+                                            <div className="search ms-2 rounded-pill border border-secondary bg-dark d-flex align-items-center  d-none d-lg-block">
                                                 <input type="search" placeholder='Tìm Kiếm' className=' bg-dark text-light border-0 ms-3  rounded-pill' />
-                                                <BsSearch className='text-light me-2 cuson fw-blod mb-1' />
+                                                <BsSearch className='text-light cuson fw-blod mb-1' />
                                             </div>
                                         </Nav>
 
                                     </Navbar>
 
-                                    <Navbar.Toggle aria-controls="offcanvasNavbar " />
+                                    <Navbar.Toggle aria-controls="offcanvasNavbar " className="bg-body" />
 
                                     <Navbar.Offcanvas
                                         id="offcanvasNavbar"
@@ -114,11 +114,10 @@ function Header() {
                     </Col>
 
                     <Col xl={2} className="d-flex align-items-center justify-content-around">
-                        <div className="d-flex align-items-center justify-content-evenly d-none d-xl-block">
-
-
-                            <div className='me-4'><img src='facebook.png' className='fb' /></div>
-                            <div><BsPersonFill className='text-light fs-1  rounded-circle border border-light p-2' /></div>
+                        <div className="d-flex align-items-center justify-content-evenly">
+                            <div className='me-4'><img src='facebook.png' className='fb d-none d-xl-block' /></div>
+                            {/* <div><BsFacebook className='text-light fs-1  bg-primary rounded-circle' /></div> */}
+                            <div><BsPersonFill className='text-light fs-1  rounded-circle border border-light p-2 d-none d-xl-block' /></div>
                         </div>
 
                     </Col>
