@@ -9,7 +9,7 @@ function Header() {
                         <div>
                             <Navbar bg="" expand="lg">
                                 <Container fluid>
-                                    <Navbar.Brand href="#" className='me-0'><img className='logo' src="phim1080.png" /></Navbar.Brand>
+                                    <Navbar.Brand href="" className='me-0'><img className='logo' src="https://fim1080.com/assets/img/phim1080.png" /></Navbar.Brand>
                                     <Navbar id="responsive-navbar-nav" className='d-none d-lg-block '>
                                         <Nav className="me-auto">
                                             <div className="dropdown">
@@ -115,7 +115,7 @@ function Header() {
 
                     <Col xl={2} className="d-flex align-items-center justify-content-around">
                         <div className="d-flex align-items-center justify-content-evenly">
-                            <div className='me-4'><img src='facebook.png' className='fb d-none d-xl-block' /></div>
+                            <div className='me-4'><img src='https://cdn-icons-png.flaticon.com/512/5968/5968764.png' className='fb d-none d-xl-block' /></div>
                             {/* <div><BsFacebook className='text-light fs-1  bg-primary rounded-circle' /></div> */}
                             <div><BsPersonFill className='text-light fs-1  rounded-circle border border-light p-2 d-none d-xl-block' /></div>
                         </div>

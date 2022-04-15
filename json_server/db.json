@@ -30,5 +30,19 @@
             "description": "Hành Động,Kinh Dị, Hình Sự",
             "image": "https://s198.imacdn.com/ff/2022/03/24/91b80f8400345b41_33ef1853f33657fc_441791648132157716068.jpg"
         }
+    ],
+    "slider": [
+        {
+            "id": 1,
+            "image": "https://s198.imacdn.com/ff/2022/03/24/2330a261dbb9e31e_982ea2b9f71d32cc_2340971648110912516068.jpg"
+        },
+        {
+            "id": 2,
+            "image": "https://s198.imacdn.com/ff/2022/04/01/d9a8abb99d0cf29b_8bfc97f8d8108540_78492164881626913816.jpg"
+        },
+        {
+            "id": 3,
+            "image": "https://s198.imacdn.com/ff/2021/02/09/d3b4d47cc1b0a87d_a8c9408e16a047ea_313351612857820116068.jpg"
+        }
     ]
 }

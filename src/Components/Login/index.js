@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './login.css'
 import Body from '../Body';
+
 // import { Link } from "react-router-dom";
 import { BsPersonCircle, BsLockFill, BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
@@ -95,10 +96,11 @@ const Login = () => {
                                 onClick={() => {
                                     if (userName && passWord === 'admin') {
                                         setPath('../Body')
+                                        console.log('da click');
+
                                     } else {
                                         alert('tên đăng nhập hoặc mật khẩu không đúng')
                                     }
-
                                 }}
 
 
