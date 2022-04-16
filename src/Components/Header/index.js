@@ -8,7 +8,7 @@ function Header() {
                     <Col XL={10}>
                         <div>
                             <Navbar bg="" expand="lg">
-                                <Container fluid>
+                                <Container fluid className='px-0'>
                                     <Navbar.Brand href="" className='me-0'><img className='logo' src="https://fim1080.com/assets/img/phim1080.png" /></Navbar.Brand>
                                     <Navbar id="responsive-navbar-nav" className='d-none d-lg-block '>
                                         <Nav className="me-auto">
